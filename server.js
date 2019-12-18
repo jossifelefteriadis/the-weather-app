@@ -4,9 +4,16 @@ const port = 3000;
 const fetch = require('node-fetch');
 require('dotenv').config();
 
-const url = 'http://api.openweathermap.org/data/2.5/weather?q=';
+const url = 'http://api.openweathermap.org/data/2.5/weather?';
 const apiId = process.env.EXPRESS_API_ID;
 
 app.use(express.static('public'));
+
+app.get('/search/:id', (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  fetch(`${url}q=${req.params.id}&units=metric&appid=${apiId}`)
+    .then(response => response.json())
+    .then(data => console.log(data));
+});
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
