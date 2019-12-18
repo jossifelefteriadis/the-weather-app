@@ -68,6 +68,10 @@ body {
     padding-right: 3%;
   }
 
+  .search__btn:hover {
+    cursor: pointer;
+  }
+
   .weather {
     /* background-color: #58d2ff; */
     color: #000000;
@@ -171,6 +175,10 @@ body {
     font-size: 1.1rem;
   }
 
+  .search__btn:hover {
+    cursor: pointer;
+  }
+
   .weather {
     /* background-color: #58d2ff; */
     color: #000000;
@@ -272,6 +280,10 @@ body {
     padding-left: 3%;
     padding-right: 3%;
     font-size: 1.1rem;
+  }
+
+  .search__btn:hover {
+    cursor: pointer;
   }
 
   .weather {

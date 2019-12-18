@@ -49,6 +49,7 @@ const getCityWeather = e => {
 };
 
 const displayWeather = data => {
+  document.querySelector('.search__input').value = '';
   day.classList.add('day');
   day.innerText = days[currentTime.getDay()];
   date.classList.add('date');
