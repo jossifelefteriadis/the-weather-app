@@ -15,14 +15,14 @@ app.get('/nearby', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   fetch(`${url}lat=${lat}&lon=${long}&units=metric&appid=${apiId}`)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => res.json(data));
 });
 
 app.get('/search/:id', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   fetch(`${url}q=${req.params.id}&units=metric&appid=${apiId}`)
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => res.json(data));
 });
 
 app.listen(port, () => console.log(`Server listening on port ${port}`));
