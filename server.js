@@ -9,6 +9,15 @@ const apiId = process.env.EXPRESS_API_ID;
 
 app.use(express.static('public'));
 
+app.get('/nearby', (req, res) => {
+  const lat = req.query.latitude;
+  const long = req.query.longitude;
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  fetch(`${url}lat=${lat}&lon=${long}&units=metric&appid=${apiId}`)
+    .then(response => response.json())
+    .then(data => console.log(data));
+});
+
 app.get('/search/:id', (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   fetch(`${url}q=${req.params.id}&units=metric&appid=${apiId}`)
