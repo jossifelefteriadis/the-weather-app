@@ -6,6 +6,7 @@ const icon = document.createElement('img');
 const wind = document.createElement('section');
 
 const days = [
+  '',
   'Monday',
   'Tuesday',
   'Wednesday',
@@ -53,7 +54,7 @@ const displayWeather = data => {
   day.classList.add('day');
   day.innerText = days[currentTime.getDay()];
   date.classList.add('date');
-  date.innerText = `${currentTime.getDate()}${months[currentTime.getMonth()]}`;
+  date.innerText = `${currentTime.getDate()} ${months[currentTime.getMonth()]}`;
   city.classList.add('city');
   city.innerText = data.name;
   temp.classList.add('temp');
