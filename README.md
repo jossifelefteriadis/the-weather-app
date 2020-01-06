@@ -19,7 +19,7 @@ npm start
 ## Screenshots from the app
 #### The current weather in nearby position
 ![The current weather in nearby position](https://github.com/jossifelefteriadis/the-weather-app/blob/master/weather_onLoad.png)
-#### The current weather based on searched city (in the example bellow: Los Angeles)
-![The current weather based on searched city (in the example bellow: Los Angeles)](https://github.com/jossifelefteriadis/the-weather-app/blob/master/weather_searchCity.png)
+#### The current weather based on searched city (in the example below: Los Angeles)
+![The current weather based on searched city (in the example below: Los Angeles)](https://github.com/jossifelefteriadis/the-weather-app/blob/master/weather_searchCity.png)
 
 Happy hacking!
